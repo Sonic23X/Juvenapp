@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="prueba.com.juvenapp.PropuestActivity"
+    android:background="@drawable/propuesta"
+    >
+
+
+    <LinearLayout
+        android:layout_width="399dp"
+        android:layout_height="561dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="64dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="183dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:layout_weight="0"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/etOpinion"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/whiteT"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:gravity="top"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/boton_atras" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnSendO"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/enviar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

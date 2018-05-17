@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="prueba.com.juvenapp.MainActivity"
+    android:background="@drawable/back"
+    >
+
+
+    <LinearLayout
+        android:layout_width="399dp"
+        android:layout_height="561dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="64dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnPR"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:background="@drawable/boton_propuestaz" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnMemorama"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:background="@drawable/memorama" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnTF"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:background="@drawable/pregyresp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/exit" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
