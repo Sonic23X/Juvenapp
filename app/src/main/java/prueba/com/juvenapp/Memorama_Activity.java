@@ -322,5 +322,21 @@ public class Memorama_Activity extends AppCompatActivity {
         ima204 =R.drawable.ima204;
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.PAUSE);
+        startService(i);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.START);
+        startService(i);
+    }
+
 
 }

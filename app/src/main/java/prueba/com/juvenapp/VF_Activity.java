@@ -1,5 +1,6 @@
 package prueba.com.juvenapp;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,17 +26,17 @@ public class VF_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_vf_);
         getSupportActionBar().hide();
 
-        respuestas[0] = true;
+        respuestas[0] = false;
         respuestas[1] = true;
         respuestas[2] = true;
         respuestas[3] = true;
         respuestas[4] = true;
         respuestas[5] = true;
-        respuestas[6] = true;
+        respuestas[6] = false;
         respuestas[7] = true;
         respuestas[8] = true;
         respuestas[9] = true;
-        respuestas[10] = true;
+        respuestas[10] = false;
         respuestas[11] = true;
 
         pregunta[0] = R.drawable.uno;
@@ -87,7 +88,10 @@ public class VF_Activity extends AppCompatActivity {
                 if(ubicacion >= 11)
                 {
                     int buenas = 12 - malas;
-                    Toast.makeText(VF_Activity.this, "Puntaje final: " + String.valueOf(buenas) + "\n Suerte para la proxima"
+                    String o = "Suerte para la proxima";
+                    if(buenas == 12)
+                        o = "Felicidades";
+                    Toast.makeText(VF_Activity.this, "Puntaje final: " + String.valueOf(buenas) + "\n" + o
                             , Toast.LENGTH_SHORT).show();
                     finish();
                 }
@@ -129,5 +133,21 @@ public class VF_Activity extends AppCompatActivity {
             verdadero.setEnabled(false);
             falso.setEnabled(false);
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.PAUSE);
+        startService(i);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.START);
+        startService(i);
     }
 }

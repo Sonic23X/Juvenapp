@@ -29,94 +29,109 @@
             tools:layout_editor_absoluteX="62dp"
             tools:layout_editor_absoluteY="126dp" />
 
-        <EditText
-            android:id="@+id/etNombre"
-            android:layout_width="341dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:ems="10"
-            android:hint="Nombre Completo"
-            android:inputType="textPersonName"
-            android:text=""
-            tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="166dp" />
-
-        <EditText
-            android:id="@+id/etDireccion"
-            android:layout_width="341dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:ems="10"
-            android:hint="Direccion"
-            android:inputType="textPersonName"
-            tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="214dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center">
+            android:orientation="vertical"
+            android:background="@color/whiteT">
 
             <EditText
-                android:id="@+id/etLocalidad"
-                android:layout_width="163dp"
+                android:id="@+id/etNombre"
+                android:layout_width="341dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:ems="10"
-
-                android:hint="Localidad"
+                android:hint="Nombre Completo"
                 android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="197dp"
-                tools:layout_editor_absoluteY="259dp" />
-
-            <EditText
-                android:id="@+id/etMunicipio"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Municipio"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="20dp"
-                tools:layout_editor_absoluteY="259dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/etNumero"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Numero"
-                android:inputType="phone"
+                android:text=""
                 tools:layout_editor_absoluteX="19dp"
-                tools:layout_editor_absoluteY="307dp" />
+                tools:layout_editor_absoluteY="166dp" />
 
             <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="164dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/etDireccion"
+                android:layout_width="317dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
                 android:ems="10"
-                android:hint="Correo"
-                android:inputType="textEmailAddress"
-                tools:layout_editor_absoluteX="195dp"
-                tools:layout_editor_absoluteY="307dp" />
+                android:hint="Direccion"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="19dp"
+                tools:layout_editor_absoluteY="214dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/etLocalidad"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+
+                    android:hint="Localidad"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="197dp"
+                    tools:layout_editor_absoluteY="259dp" />
+
+                <EditText
+                    android:id="@+id/etMunicipio"
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Colonia/Municipio"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="259dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/etNumero"
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Numero"
+                    android:inputType="phone"
+                    tools:layout_editor_absoluteX="19dp"
+                    tools:layout_editor_absoluteY="307dp" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Correo"
+                    android:inputType="textEmailAddress"
+                    tools:layout_editor_absoluteX="195dp"
+                    tools:layout_editor_absoluteY="307dp" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="103dp"
+            android:layout_height="87dp"
             app:srcCompat="@drawable/cintillo_informativo"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="346dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:gravity="center">
+
+            <Button
+                android:id="@+id/btnAnterior"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/boton_atras" />
 
             <Space
                 android:layout_width="139dp"
@@ -125,8 +140,8 @@
 
             <Button
                 android:id="@+id/btnNextR"
-                android:layout_width="98dp"
-                android:layout_height="73dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@drawable/boton_continuar"
                 android:text=""
                 tools:layout_editor_absoluteX="248dp"

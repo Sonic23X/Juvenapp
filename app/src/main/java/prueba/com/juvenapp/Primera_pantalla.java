@@ -23,7 +23,7 @@ public class Primera_pantalla extends AppCompatActivity {
             public void run() {
                 siguiente();
             }
-        }, 16500);
+        }, 16800);
     }
 
     public void siguiente()
@@ -32,5 +32,21 @@ public class Primera_pantalla extends AppCompatActivity {
         startActivity(i);
 
         finish();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.PAUSE);
+        startService(i);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.START);
+        startService(i);
     }
 }

@@ -101,11 +101,11 @@ public class Tercera_pantalla extends AppCompatActivity {
         if(num == '1')
         {
             inicio = true;
+            Toast.makeText(this, "Premio Seleccionado, ¡Gracias!", Toast.LENGTH_LONG).show();
         }
         else
         {
             Toast.makeText(this, res, Toast.LENGTH_LONG).show();
-            Log.e("Error", res);
             inicio = false;
         }
 
@@ -168,6 +168,22 @@ public class Tercera_pantalla extends AppCompatActivity {
         protected void onPostExecute(String result) {
             avisar(result);
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.PAUSE);
+        startService(i);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.START);
+        startService(i);
     }
 
 }

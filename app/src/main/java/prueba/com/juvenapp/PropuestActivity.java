@@ -1,5 +1,6 @@
 package prueba.com.juvenapp;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -79,7 +80,8 @@ public class PropuestActivity extends AppCompatActivity {
         char a = res.charAt(0);
         if(a == '1')
         {
-            Toast.makeText(this, "Opinion enviada, ¡Gracias!", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(PropuestActivity.this, ThankActivity.class);
+            startActivity(i);
         }
         else
         {
@@ -140,6 +142,22 @@ public class PropuestActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             fin(result);
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.PAUSE);
+        startService(i);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.START);
+        startService(i);
     }
 
 }

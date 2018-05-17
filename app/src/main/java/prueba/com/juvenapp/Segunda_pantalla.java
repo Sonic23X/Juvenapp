@@ -37,7 +37,7 @@ import java.util.List;
 public class Segunda_pantalla extends AppCompatActivity {
 
     EditText name, direccion, localidad, municipio, tel, email;
-    Button siguiente;
+    Button siguiente, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +53,17 @@ public class Segunda_pantalla extends AppCompatActivity {
         email = (EditText) findViewById(R.id.etEmail);
 
         siguiente = (Button) findViewById(R.id.btnNextR);
+        back = (Button) findViewById(R.id.btnAnterior);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Segunda_pantalla.this, Primera_pantalla.class);
+                startActivity(i);
+
+                finish();
+            }
+        });
 
         siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -174,5 +185,21 @@ public class Segunda_pantalla extends AppCompatActivity {
         protected void onPostExecute(String result) {
             avisar(result);
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.PAUSE);
+        startService(i);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Intent i = new Intent(this, Sound.class);
+        i.putExtra("action", Sound.START);
+        startService(i);
     }
 }
