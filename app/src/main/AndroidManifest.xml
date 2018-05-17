@@ -32,8 +32,12 @@
         <activity
             android:name=".Tercera_pantalla"
             android:screenOrientation="portrait" />
-        <activity android:name=".PropuestActivity" />
-        <activity android:name=".Memorama_Activity"></activity>
+        <activity android:name=".PropuestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Memorama_Activity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".VF_Activity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

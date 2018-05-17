@@ -32,6 +32,7 @@ public class Memorama_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memorama_);
+        getSupportActionBar().hide();
 
         salir = (Button) findViewById(R.id.btnSalirM);
 
