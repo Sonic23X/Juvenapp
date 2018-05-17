@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
         memorama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(MainActivity.this, Memorama_Activity.class);
+                startActivity(i);
             }
         });
 

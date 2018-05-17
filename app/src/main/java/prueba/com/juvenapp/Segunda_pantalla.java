@@ -101,7 +101,7 @@ public class Segunda_pantalla extends AppCompatActivity {
         {
             String [] parts = res.split("-");
             char num = res.charAt(0);
-            if(Integer.parseInt("" + num) == 1)
+            if(num == '1')
             {
                 Intent i = new Intent(Segunda_pantalla.this, Tercera_pantalla.class);
                 i.putExtra("registro", true);
@@ -111,7 +111,7 @@ public class Segunda_pantalla extends AppCompatActivity {
             }
             else
             {
-                Toast.makeText(this, "Error, intente más tarde", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, res, Toast.LENGTH_LONG).show();
                 Log.e("Error", res);
             }
         }

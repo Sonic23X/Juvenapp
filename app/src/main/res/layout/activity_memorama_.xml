@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/activity_main2"
+    android:background="@drawable/fondomemo"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="6dp"
+    android:paddingTop="16dp"
     tools:context=".Memorama_Activity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <include
+
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        layout="@layout/memorama"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <Button
+        android:id="@+id/btnSalirM"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/boton_salir"/>
+
+
+</RelativeLayout>
